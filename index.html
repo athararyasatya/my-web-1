@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>WebGuppyAfr</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="Foto/fish.png">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -27,6 +27,7 @@
         <a href="#about">Tentang Kami</a>
         <a href="#stok">Stok</a>
         <a href="#paket">Paket</a>
+        <a href="#order">Order </a>
         <a href="#lokasi">Lokasi</a>
      </div>
     
@@ -46,8 +47,8 @@
                         Website
                          <span class="text-span">Afr Guppy</span></h1>
 
-                    <p class="text-white">Websie Ini Saya Buat Untuk Customer Bisa Melihat Tentang Produk Kami, Stok Ikan Yang Tersedia, Alamat Store, Dan Jika Ingin Ada Yang
-                     Di Tanyakan Lebih Detail Kalian Juga Bisa Mengklik Tombol "Ask Me"
+                    <p class="text-white">Website ini saya buat untuk customer bisa melihat tentang produk kami, stok ikan yang tersedia, alamat store, Dan Jika Ingin Ada Yang
+                     di tanyakan lebih detail kalian juga bisa mengklik tombol "Ask Me"
                     </p>
                      <!-- Button -->
                      <div data-aos="fade-up">
@@ -79,8 +80,8 @@
         <div class="page-center2">
             <div class="about-content">
                 <div class="about-left" ></div>
-                   <div class="about-right d-grid gap-48 ">
-                      <div class=" d-grid gap-24 text-center tntang-slide ">
+                   <div class="about-right d-grid gap-32 ">
+                      <div class=" d-grid gap-16 text-center tntang-slide ">
                         <h2 data-aos="fade-down">Tentang <span class="about-span" >Produk Kami</span></h2>
                         <p data-aos="fade-up">
                             Di bawah ini adalah fasilitas yang anda dapatkan ketika order di Afr gupy</p>
@@ -132,6 +133,7 @@
            </div>
         </div>
     </div>
+
     <!-- Page Ready stok -->
     <div id="stok" class="stok">
         <div class="page-center ">
@@ -278,6 +280,73 @@
     </div>
     <!-- End Paket 1 2 3 -->
 
+    
+
+
+
+    <div  id="order" class="head-ord gap-5 text-center">
+       <div  data-aos="fade-down">
+          <h2 data-aos="fade-down" class="ahmantap " >Order !</h2>
+       </div>
+       <div data-aos="fade-up">
+        <p class="pbrt">Isi form di bawah ini jika tertarik dengan produk kami</p>
+      </div>
+    </div>
+    <div class="Ordercontainer">
+    <div data-aos="zoom-in-down" class="Order">
+      <div  data-aos="fade-right" class="inputorder">
+        <label for="">Nama Lengkap :</label>
+        <input type="text" placeholder="Masukan nama lengkap" required>
+      </div>
+      <div  data-aos="fade-left" id="jsphone" class="inputorder">
+        <label for="">Nomor Telfon :</label>
+        <input type="telfon" placeholder="08xxxxxxxxxx" required maxlength="13">
+      </div>
+      
+      <div  data-aos="fade-right"class="inputorder">
+        <label for="">Tanggl order:</label>
+        <input type="date" placeholder="" required>
+      </div>
+
+     
+      <div  data-aos="fade-left" class="inputorder">
+        <label for="paket">Paket :</label>
+        <select id="paket" required>
+          <option value="">Pilih Paket</option>
+          <option value="p1">Paket 1</option>
+          <option value="p2">Paket 2</option>
+          <option value="p3">Paket 3</option>
+          <!-- Tambahkan pilihan ekspedisi lainnya sesuai kebutuhan -->
+        </select>
+      </div>
+
+      <div  data-aos="fade-right" class="inputorder">
+        <label for=""><span class="spnslc"> (Pilihan jika ingin beli per pair/random tanpa paket) :</span></label>
+        <input type="number" placeholder="jumlah pair/pasang" required inputmode="numeric">
+      </div>
+
+      <div  data-aos="fade-left" class="inputorder">
+        <label for="expedisi">Expedisi :</label>
+        <select id="expedisi" class="select2" required>
+          <option value="">Pilih Expedisi</option>
+          <option value="JNE">JNE</option>
+          <option value="Tiki">Tiki</option>
+          <option value="POS Indonesia">POS Indonesia</option>
+          <!-- Tambahkan pilihan ekspedisi lainnya sesuai kebutuhan -->
+        </select>
+      </div>
+
+      <div  data-aos="fade-right" id="alamat" class="inputorder">
+        <label for="alamat-input"> Alamat  :</label>
+        <input id="alamatinput"  type="text" placeholder="Masukan alamat lengkap " required>
+      </div>
+      
+      <!-- Button ssubmit -->
+     <button  data-aos="fade-up" class="butOn">
+      Kirim
+     </button>
+    </div>
+  </div>
 
     <!-- LOkasi -->
     <div id="lokasi" class="Awal-map text-center d-grid gap-16">
@@ -288,11 +357,11 @@
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
         </div>
     </div>
+   
 
     <section id="footer">
         <div class="main-footer">
           <div class="logoinfo" data-aos="fade-up">
-         
             <div class="contact-details">
               <h1>Kontak Kami</h1>
               <li>
@@ -312,6 +381,7 @@
               <li><a href="#stok">Stok </a></li>
               <li><a href="#paket">Paket</a></li>
               <li><a href="#lokasi">Lokasi</a></li>
+              <li><a href="#order">Order</a></li>
             </ul>
           </div>
           <div class="info" data-aos="fade-up">
@@ -324,9 +394,10 @@
             </div>
           </div>
         </div>
-        
+    
+          
         <footer class="ah" > | Website Ini Dibuat Oleh Athar Aryasatya © 2024 | </footer>
-      
+       
       </section>
 
       
@@ -339,7 +410,7 @@
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
         </script>
 
-        <script src="script.js">
+        <script src="js/script.js">
         </script>
 
         <!-- scrip animasi -->

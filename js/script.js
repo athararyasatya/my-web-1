@@ -21,4 +21,8 @@ document.addEventListener('click',function(e) {
     
 });
 
+document.getElementById("jsphone").querySelector("input[type=telfon]").oninput = function(event) {
+    // Hanya membiarkan input angka
+    this.value = this.value.replace(/\D/g, '');
+};
 

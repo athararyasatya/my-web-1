@@ -42,6 +42,7 @@ html{
     font-style: italic;
     text-decoration: none;
     font-weight: 800;
+    transition: ease-in-out 0.3s;
 }
 
 .header .header-logo:hover{
@@ -214,6 +215,7 @@ html{
     }
   }
 
+  
 
 
 
@@ -223,13 +225,13 @@ html{
     font-size: 1rem;
     margin: 0.4rem;
     text-decoration: none;
+    transition: ease-in-out 0.3s;
 
 }
 
 .header .header-extra a:hover{
     color: var(--span);
-    scale: 1.1;
-    transition-duration: 1s;
+    transform: scale(1.1);
 }
 
 .header .header-extra a::after{
@@ -283,6 +285,7 @@ body,h1,h2,h3,p {
 
 .text-span{
     color: var(--span);
+    transition: ease-in-out 0.3s;
 }
 
 
@@ -389,8 +392,6 @@ ion-icon{
   
    
 }
-
-
 
 button.primary{
     background-color: var(--span);
@@ -541,10 +542,12 @@ button.secondary{
     gap: 24px;
     display: flex;
     color: var(--dark);
-    padding: 32px;
+    padding: 45px ;
+    top: 0;
     border-radius: 10px;
     box-shadow: 10px 10px 11px 2px rgba(4, 4, 4, 0.416);
     columns:auto 10rem;
+    transition: ease-in-out 0.3s;
 }
 
 .card2-content:hover{
@@ -599,6 +602,7 @@ button.secondary{
     max-width: 450px;
     height: 230px;
     width: 200px;
+    transition: ease-in-out 0.3s;
 }
 
 .card p{
@@ -684,7 +688,7 @@ h3{
 .paket-card{
     cursor: pointer;
     width: 300px;
-    height: 350px;
+    height: 370px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -695,7 +699,8 @@ h3{
     margin: 20px;
     transition: 0.4s;
     position: relative;
-    background-image: src ;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  
 
 }
 
@@ -769,13 +774,14 @@ ul{
     border-radius: 20px;
     cursor: pointer;
     border: 5px solid var(--primary);
+    transition: ease-in-out 0.3s;
 }
 
 .map:hover{
     border: 5px solid var(--primary);
     transform: scale(1.03);
     transition: all 0.5s ease-in-out;
-    border-radius: 8%;
+    border-radius: 5%;
 }
 .main-footer {
     padding: 70px 0;
@@ -882,6 +888,276 @@ footer a {
 }
 
 
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.container form .form{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+.container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.ahmantap{
+    animation: tilt-shaking 0.3s infinite;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.head-ord{
+    padding-top: 70px;
+    justify-content: center;
+    background: var(--span);
+    align-items: center;
+    color: var(--dark);
+    overflow: hidden;
+ 
+}
+
+.pbrt{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--dark);
+}
+
+.Ordercontainer{
+    min-height: 90vh;
+    background-color: var(--span);
+    justify-content: center;
+}
+
+.Ordercontainer .Order{
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    height: 440px;
+    margin:0 auto;
+    width: 50%;
+    padding: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent);
+   
+}
+
+.Order .inputorder{
+    display: flex;
+    margin: 4px 0;
+    flex-direction: column;
+  
+}
+
+.inputorder label{
+  
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 9px;
+   
+}
+
+.inputorder input{
+    transition: all 0.5s ease-in-out;
+    padding: 0 10px;
+    outline: none;
+    height: 35px;
+    border: 1px solid var(--dark);
+    border-radius: 9px;
+    background-color: var(--fourground);
+}
+
+.inputorder input:hover{
+    transform: scale(1.02);
+    box-shadow:0 4px 5px var(--primary);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.inputorder input[type="date"]{
+    color: var(--dark);
+    transition: all 0.3s ease-in-out;
+
+
+}
+   
+.inputorder select{
+    border: 1px solid var(--dark);
+    width: 195px;
+    height: 35px;
+    border-radius: 10px;
+    color: var(--dark);
+    background-color: var(--fourground);
+    transition: all 0.3s ease-in-out;
+}
+
+.inputorder select:hover{
+    transform: scale(1.02);
+    box-shadow:0 4px 5px var(--primary);
+
+}
+
+.inputorder select#paket {
+    /* Gaya untuk elemen select pakkt */
+    width: 179px;
+    background-color: var(--fourground);
+    color: var(--dark);
+  
+}
+
+.inputorder select#expedisi {
+    /* Gaya untuk elemen select ekspedisi */
+    width: 148px;
+    background-color: var(--fourground);
+    color: var(--dark);
+  
+}
+#alamat {
+    margin: 10px 154px ;
+    text-align: center;
+    vertical-align: top; 
+    height: 130px;
+   
+  
+}
+#alamat input {
+    text-align: left; 
+    top: -20px; /* Sesuaikan jarak ke atas */
+
+}
+
+
+
+
+#alamat input[type="text"] {
+    height: 200px;
+    width: 350px;
+    text-align: left;
+}
+.spnslc{
+    font-size: 9px;
+}
+
+.butOn {
+    align-items: center;
+    margin: auto;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: var(--light);
+    margin-top: 21px;
+    padding: 13px 20px ;
+    font-weight: 700;
+    font-size: 15px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.47);
+    transition: all 250ms;
+    overflow: hidden;
+    position: relative; /* tambahkan ini */
+   }
+   
+   .butOn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: var(--primary);
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.15);
+    transition: all 250ms
+   }
+   
+   .butOn:hover {
+    transform: scale(1.1);
+    color: var(--light);
+   }
+   
+   .butOn:hover::before {
+    width: 100%;
+   }
+
 
 /* Media Query Buat Di Dekstop */
 @media (min-width: 767px) {
@@ -929,6 +1205,60 @@ footer a {
         margin-bottom: -10%;
        
     }
+}
+
+
+/* Media di tablet */
+
+@media screen and (max-width: 1024px) {
+
+ .head-ord{
+    min-height: 100vh;
+  
+
+ }
+ .Ordercontainer .Order{
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+    position: relative;
+    height: 640px;
+    margin:0 auto;
+    padding-bottom: 30px;
+ 
+   
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent);
+   
+}
+    
+  #alamat {
+    padding-top: -15px;
+     margin: 15px 0 ;
+     vertical-align: top; 
+     height: 130px;
+     margin-bottom: 30px;
+     text-align: left;
+     
+  
+ }
+ 
+ #alamat input[type="text"] {
+     height: 300px;
+     width: 173px;    
+ }
+ 
+ .butOn{
+     padding: 10px 20px;
+     font-size: 14px;
+ 
+ }
+ 
+
+   
 }
 
 /* Media Query Buat Di HandPhone */
@@ -1118,7 +1448,7 @@ footer a {
     .btn-price{
         margin-top: 19px;
         font-size: 9px;
-        padding-bottom: 13px;
+        padding-bottom: 10px;
         padding-top: 10px;
         border-radius: 10px;
     }
@@ -1198,7 +1528,58 @@ footer a {
     font-size: 10px;
     
   }
+
+  .head-ord p{
+    font-size: 13px;
+    
+ 
+
+  }
+
+  .Ordercontainer{
+    min-height: 108vh;
+    border:none;
+  }
+
+  .Ordercontainer .Order{
+    overflow: hidden;
+    height: 735px;
+    width: 71%;
+  }
+
+  #alamat {
+   padding-top: 15px;
+    margin: 15px 0 ;
+    vertical-align: top; 
+    height: 130px;
+    margin-bottom: 30px;
+    text-align: left;
+    
+ 
 }
+
+#alamat input[type="text"] {
+    height: 300px;
+    width: 173px;    
+}
+
+.butOn{
+    padding: 10px 20px;
+    font-size: 14px;
+
+}
+
+.head-ord{
+   overflow-x: hidden;
+   padding: 0;
+   margin-bottom: 0;
+   border: none;
+}
+
+}
+
+
+
 /* 
 @media (max-width: 496px) {
 
